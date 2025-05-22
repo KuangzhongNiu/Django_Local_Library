@@ -10,3 +10,13 @@ urlpatterns = [
     path('author/<int:pk>', views.AuthorDetailView.as_view(), name='author-detail'),
     # Challenge
 ]
+
+urlpatterns += [
+    path('mybooks/', views.LoanedBooksByUserListView.as_view(), name='my-borrowed'),
+]
+
+# Challenge 8
+urlpatterns += [
+    path('allborrowed/', views.LoanedBooksAllListView.as_view(), name='all-borrowed'),
+]
+# Challenge 8
